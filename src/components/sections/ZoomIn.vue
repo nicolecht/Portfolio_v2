@@ -3,7 +3,7 @@
     <h4>Zoom In</h4>
     <div class="border border-success p-5">
       <div class="card card-body bg-success w-50 mx-auto zoom-in" ref="element">
-        <h1 class="text-center">Test Message</h1>
+        <h1 class="text-center">Testing</h1>
       </div>
     </div>
   </section>
