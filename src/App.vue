@@ -1,21 +1,30 @@
 <template>
-  <div class="row">
-    <div class="hero col-6">
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="text-end">
+    <ColorSchemeButton />
+  </header>
+  
+  <section>
+    <div class="row">
+      <div class="hero col-md-6">
+        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-      <div class="wrapper">
-        <HelloWorld msg="You did it!" />
+        <div class="wrapper">
+          <HelloWorld msg="You did it!" />
 
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
+          <nav>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+          </nav>
+        </div>
+
       </div>
-      <ColorSchemeButton />
-    </div>
 
-    <TheWelcome class="col-6" />
-  </div>
+      <TheWelcome class="col-md-6" />
+    </div>
+  </section>
+
+  <ZoomIn />
+
   <!-- <RouterView /> -->
 </template>
 
@@ -24,6 +33,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import ColorSchemeButton from './components/ColorSchemeButton.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import ZoomIn from './components/sections/ZoomIn.vue'
 
 </script>
 

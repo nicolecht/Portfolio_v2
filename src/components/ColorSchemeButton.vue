@@ -1,13 +1,19 @@
 <template>
 	<div>
-		<button class="btn btn-success" @click="toggleColorScheme">Toggle Color Scheme</button>
+		<button class="btn btn-success" @click="toggleColorScheme(); colorScheme.isLight = !colorScheme.isLight;">Toggle
+			Color Scheme</button>
 	</div>
 </template>
 
 <script setup>
+import { reactive } from 'vue';
+
+const colorScheme = reactive({
+	isLight: getComputedStyle(document.documentElement).getPropertyValue("--color-background") === "#ffffff",
+})
 
 const toggleColorScheme = () => {
-	if (getComputedStyle(document.documentElement).getPropertyValue("--color-background") === "#ffffff") {
+	if (colorScheme.isLight) {
 		document.documentElement.style.setProperty("--color-background", "#181818");
 		document.documentElement.style.setProperty("--color-background-soft", "#222222");
 		document.documentElement.style.setProperty("--color-background-mute", "#282828");
